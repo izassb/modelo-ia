@@ -18,6 +18,7 @@ else:
     path = './src/model-final.h5'
 
 model = load_model(path, compile=False)
+
 model.compile()
 
 def preprocess(img):
