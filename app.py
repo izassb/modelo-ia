@@ -32,15 +32,15 @@ def get_class_info(prediction):
     class_id = np.argmax(prediction)
 
     if class_id == 0:
-        class_name = "feliz"
+        class_name = "Feliz"
     elif class_id == 1:
-        class_name = "triste"
+        class_name = "Triste"
     else:
-        class_name = "raiva"
+        class_name = "Raiva"
     
     return int(class_id), class_name
 
-@app.route('/upload', methods=['POST'])
+@app.route('/uploads', methods=['POST'])
 def predict():
     file = request.files['file']
     img = Image.open(file.stream)
